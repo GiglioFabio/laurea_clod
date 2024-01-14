@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="./scripts.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<div class="header">
+  <h1>Masti Puzzle</h1>
+  <h4>Claudio ha failato e ha fatto cadere la scatola dei Puzzle. Riodinali</h4>
+</div>
+<div id="container">
+  <a href="#" class="button start">Start</a>
+  <div class="box">
+    <div class="me full"></div>
+  </div>
+  <!-- <div class="pre_img">
+      <li data-bid="0"><img src="https://preview.ibb.co/kMdsfm/kfp.png" /></li>
+      <li data-bid="1">
+        <img src="https://preview.ibb.co/kWOEt6/minion.png" />
+      </li>
+      <li data-bid="2"><img src="https://preview.ibb.co/e0Rv0m/ab.jpg" /></li>
+      <li data-bid="3" id="upfile1">
+        <img src="https://image.ibb.co/cXSomR/upload1.png" />
+      </li>
+      <input type="file" name="image" id="file1" style="display: none" />
+    </div> -->
+  <div align="center" style="margin-top: 20px;">
+    <label id="numero-immagine"></label>
+    <!-- <a href="#" class="button reset" align="center">Reset</a> -->
+    <button class="button" id="nextImg">Prossimo</button>
+  </div>
+</div>
+
+<div class="cover">
+  <div class="score">
+    <p id="scr_head">Congratulazioni, procedi con il prossimo</p>
+    <p id="scr_time">
+      Time : <span id="min">00</span> Min <span id="sec">00</span> Sec
+    </p>
+    <p id="scr_moves">Moves : <span id="moves"></span></p>
+    <div class="button OK">OK</div>
+  </div>
+</div>
+
+</html>
