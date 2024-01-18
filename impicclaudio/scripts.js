@@ -28,6 +28,7 @@ window.onload = function () {
     'z',
   ];
 
+  //todo finire le domande
   var categories = [
     [
       { id: 1, word: 'mastarna', hint: 'Il soprannome di Claudio' },
@@ -98,6 +99,7 @@ window.onload = function () {
     showLives.innerHTML = 'You have ' + lives + ' lives';
     if (lives < 1) {
       showLives.innerHTML = 'Game Over';
+      mostraMastarnaImp();
     }
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
@@ -106,6 +108,16 @@ window.onload = function () {
       }
     }
   };
+
+  function mostraMastarnaImp() {
+    myStickman = document.getElementById('stickman').style.display = 'none';
+    document.getElementById('impiccatomasti').style.display = '';
+  }
+
+  // document.getElementById('stampamastarna').onclick = function () {
+  //   console.log('aaaa');
+  //   mostraMastarnaImp();
+  // };
 
   // Animate man
   var animate = function () {
@@ -210,6 +222,9 @@ window.onload = function () {
 
   // Play
   play = function () {
+    myStickman = document.getElementById('stickman').style.display = '';
+    document.getElementById('impiccatomasti').style.display = 'none';
+
     var giafatta = true;
     while (giafatta) {
       chosenCategory =
