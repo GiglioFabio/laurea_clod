@@ -10,19 +10,15 @@ $(document).ready(function () {
     mm = 0,
     ss = 0,
     // upIMG,
-    // images = [
-    //   'https://preview.ibb.co/kMdsfm/kfp.png',
-    //   'https://preview.ibb.co/kWOEt6/minion.png',
-    //   'https://preview.ibb.co/e0Rv0m/ab.jpg',
-    // ];
-    //todo
     images = [
-      'https://media.licdn.com/dms/image/C4D03AQHIQAruNKAbcA/profile-displayphoto-shrink_200_200/0/1648742506447?e=2147483647&v=beta&t=YnsKIYnsyJmGVackn0Y1137_YkibXpCBhXXDmZSsKtM',
-      'https://preview.ibb.co/kMdsfm/kfp.png',
-      'https://preview.ibb.co/kWOEt6/minion.png',
-      'https://preview.ibb.co/e0Rv0m/ab.jpg',
+      './assets/puzzle_1.jpg',
+      './assets/puzzle_2.jpg',
+      './assets/puzzle_3.jpeg',
+      './assets/puzzle_4.jpeg',
+	  './assets/puzzle_5.jpeg',
+	  './assets/puzzle_6.jpeg',
     ];
-  //TODO
+
   imagesSfondo = '';
   imgCount = 0;
 
