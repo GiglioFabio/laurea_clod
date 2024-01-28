@@ -372,7 +372,7 @@ function buildVars() {
           name: 'vomi-cagata',
           hp: randomNum(500, 350),
           avail: {
-            total: 1,
+            total: 2,
             remaining: 2,
           },
         },
@@ -616,11 +616,11 @@ function resetGame() {
   for (var i in characters) {
     // build the character list
     $('.characters').append(
-      '<div class="char-container"><img src="' +
+      '<div class="char-container"><img class="char-container-img" src="' +
         characters[i].img.default +
         '" alt="' +
         characters[i].name +
-        '"><h2>' +
+        '"><h2 class = "char-container-h2">' +
         characters[i].name +
         '</h2><span class="type ' +
         characters[i].type +
