@@ -57,15 +57,15 @@ let mouseX;
 //   'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/images/background.png';
 // let mapPath =
 //   'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/levels/codepen-level.json';
-// let pillPath =
-//   'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/images/pac%20man%20pill/spr_pill_0.png';
+let pillPath =
+  'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/images/pac%20man%20pill/spr_pill_0.png';
 // let lifecounterPath =
 //   'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/images/pac%20man%20life%20counter/spr_lifecounter_0.png';
 
 let spritesheetPath = 'assets/charts.png';
 let tilesPath = 'assets/background.png';
 let mapPath = 'assets/map_path.json';
-let pillPath = 'assets/spr_pill_0.png';
+// let pillPath = 'assets/spr_pill_0.png';
 let lifecounterPath = 'assets/spr_lifecounter_0.png';
 
 let Animation = {

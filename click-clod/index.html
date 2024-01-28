@@ -1,0 +1,111 @@
+<!DOCTYPE html translate="no">
+
+<html>
+
+<body>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://kit.fontawesome.com/992a528ec9.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|VT323&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./scripts.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <div id="app" class=" mx-auto my-5 font-ubuntu-mono text-gray-900 px-1">
+        <div class="flex flex-row">
+            <div>
+                <a href="../index.html#giochi"
+                    style="width: 100px; background-color: #f1f1f1;color: black;  text-decoration: none;display: inline-block;padding: 8px 16px;">&laquo;
+                    Back to
+                    site</a>
+            </div>
+
+
+            <div style="width: 100%;">
+                <h1 class="text-5xl mb-5 font-vt323 text-blue-700 text-center">3 Caffè Game</h1>
+                <h3 class="text-1xl mb-5 font-vt323 text-blue-700 text-center">Mastarna deve gestire una società,
+                    aiutalo</h3>
+            </div>
+        </div>
+
+
+
+
+        <div id="score" class="flex justify-between my-5 text-3xl font-vt323">
+            <div>Score:</div>
+            <div>{{score}} caffè</div>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+
+            <div class="col-span-2">
+
+                <button id="click-btn"
+                    class="block border border-black py-5 px-10 rounded-sm shadow hover:bg-blue-200 my-5 w-full"
+                    v-on:click="pressButton()">Vendi caffè (+{{click}} caffè)</button>
+
+                <div v-if="configuration.tools.length > 0" class="overflow-auto flex flex-row"
+                    style="max-height: 300px;">
+                    <h2 class="text-2xl my-2 font-vt323">Probabilità</h2>
+                    <button
+                        class="inline-block border border-black px-2 py-1 mt-2 shadow rounded-sm hover:bg-blue-200 ml-3"
+                        v-on:click="tiraDado()">Tira il dado</button>
+
+                </div>
+                <h3 id="prob-label" class="text-2xl my-2 font-vt323 ml-4 overflow-scroll" style="max-height: 150px;">
+                    {{probabilita}}</h3>
+
+                <div v-if="configuration.tools.length > 0" class="overflow-auto" style="max-height: 300px;">
+                    <h2 class="text-2xl my-2 font-vt323">Tools</h2>
+
+                    <div class="bg-blue-100 rounded-sm py-2 px-5 mb-2" v-for="tool in configuration.tools">
+
+                        <h3 class="font-vt323 text-2xl">{{tool.name}}</h3>
+
+                        <div>Cost: {{tool.cost}} caffè / Effect: button gives {{tool.click}} caffè per click</div>
+
+                        <div><button
+                                class="inline-block border border-black px-2 py-1 mt-3 shadow rounded-sm hover:bg-blue-200"
+                                v-on:click="buyTool(tool.id)">Buy one</button></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl my-2 font-vt323">Upgrade (+ {{perSecond}}/s)</h2>
+
+                <div class="overflow-auto" style="max-height: 460px;">
+                    <div class="bg-blue-100 rounded-sm py-2 px-5 mb-2" v-for="generator in configuration.generators"
+                        v-if="generator.id == 0 || generators[generator.id-1] > 0">
+
+                        <h3 class="font-vt323 text-2xl">{{generator.name}} </h3>
+                        <span v-if="generators[generator.id]">[owned:
+                            {{generators[generator.id]}}]</span>
+                        <div>Cost: {{generator.cost+generators[generator.id]*generator.costIncrease}} caffè /
+                            Generates:
+                            {{generator.generate}}/s</div>
+
+                        <div><button
+                                class="inline-block border border-black px-2 py-1 mt-3 shadow rounded-sm hover:bg-blue-200"
+                                v-on:click="buy(generator.id)">Buy one</button></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <button class="block border border-black py-2 px-4 mt-20 rounded-sm shadow hover:bg-blue-200 font-vt323"
+            v-on:click="reset()">Reset game</button>
+    </div>
+
+
+
+</body>
+
+</html>
