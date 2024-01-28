@@ -10,6 +10,7 @@ body{
     img{
       max-height: 100px;
       cursor: pointer;
+      height: 100%;
     }
   }
   
@@ -81,6 +82,7 @@ body{
     
     img{
       max-height: 100px;
+      height: 100%;
       margin-bottom: 13px;
       transition: transform 0.3s ease, margin 0.3s ease;
     }
@@ -121,6 +123,7 @@ body{
         
         img{
           height: 150px;
+          height: 100%;
         }
         
         .data{
