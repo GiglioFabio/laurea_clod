@@ -796,7 +796,9 @@ function attackEnemy(that, callback) {
       $('.modal-in header').append(
         '<h1>You Masti-Enemy is slain</h1><span class="close">x</span>'
       );
-      $('.modal-in section').append('<p>Congratulations! Dare you try again?');
+      $('.modal-in section').append(
+        '<p>Congratulations! Seleziona un altro nemico'
+      );
       $('.modal-out').slideDown('400');
       modalControls();
 
@@ -894,9 +896,9 @@ function defend(that) {
 
     clearModal();
     $('.modal-in header').append(
-      '<h1>Your Hero has died</h1><span class="close">x</span>'
+      '<h1>Sei Morto</h1><span class="close">x</span>'
     );
-    $('.modal-in section').append('<p>You Fail, good day!');
+    $('.modal-in section').append('<p>You Fail!');
     $('.modal-out').slideDown('400');
     modalControls();
 

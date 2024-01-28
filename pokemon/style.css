@@ -193,40 +193,41 @@ strong {
   width: 100vw;
   background: rgba(33, 33, 33, 0.75);
   z-index: 900;
+}
 
-  .modal-in {
-    position: fixed;
-    top: 15vh;
-    left: 0;
-    right: 0;
-    width: 50vw;
-    height: 20vh;
-    margin: 0 auto;
-    background: #fffafa;
+.modal-out .modal-in {
+  position: fixed;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  width: 50vw;
+  height: 20vh;
+  margin: 0 auto;
+  background: #fffafa;
+}
 
-    header {
-      position: relative;
-      min-height: 30px;
-      text-align: center;
-      padding: 10px 3%;
-      box-sizing: border-box;
-      h1 {
-        font-size: 2.2em;
-      }
-    }
-    .close {
-      cursor: pointer;
-      position: absolute;
-      top: 13px;
-      right: 13px;
-    }
+.modal-out .modal-in header {
+  position: relative;
+  min-height: 30px;
+  text-align: center;
+  padding: 10px 3%;
+  box-sizing: border-box;
+  h1 {
+    font-size: 2.2em;
+  }
+}
 
-    section {
-      box-sizing: border-box;
-      padding: 25px 10%;
-      p {
-        font-size: 30px;
-      }
-    }
+.modal-out .modal-in .close {
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+
+.modal-out .modal-in section {
+  box-sizing: border-box;
+  padding: 25px 10%;
+  p {
+    font-size: 30px;
   }
 }

@@ -62,7 +62,6 @@ let mouseX;
 // let lifecounterPath =
 //   'https://raw.githubusercontent.com/kudchikarsk/phaser-pacman/master/assets/images/pac%20man%20life%20counter/spr_lifecounter_0.png';
 
-//todo
 let spritesheetPath = 'assets/charts.png';
 let tilesPath = 'assets/background.png';
 let mapPath = 'assets/map_path.json';
