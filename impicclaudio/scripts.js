@@ -33,6 +33,7 @@ window.onload = function () {
     [
       { id: 1, word: 'mastarna', hint: 'Il soprannome di Claudio' },
       { id: 2, word: 'via de gaspari', hint: 'La via della casa di Clod' },
+      { id: 3, word: 'a b c', hint: 'La via della casa di Clod' },
     ],
   ]; // Array of topics
   var chosenCategory; // Selected catagory
@@ -77,13 +78,15 @@ window.onload = function () {
     wordHolder = document.getElementById('hold');
     correct = document.createElement('ul');
 
+    space = 0;
+
     for (var i = 0; i < word.length; i++) {
       correct.setAttribute('id', 'my-word');
       guess = document.createElement('li');
       guess.setAttribute('class', 'guess');
       if (word[i] === '-') {
         guess.innerHTML = '-';
-        space = 1;
+        space = space + 1;
       } else {
         guess.innerHTML = '_';
       }
@@ -103,8 +106,11 @@ window.onload = function () {
     }
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
-        showLives.innerHTML = 'You Win!';
         wordsAlreadyDone.push(chosenCategory.id);
+        wordsAlreadyDone = [...new Set(wordsAlreadyDone)];
+        showLives.innerHTML =
+          'You Win! ' + wordsAlreadyDone?.length + '/' + categories[0]?.length;
+        console.log(wordsAlreadyDone);
       }
     }
   };
@@ -203,6 +209,7 @@ window.onload = function () {
       var geuss = this.innerHTML;
       this.setAttribute('class', 'active');
       this.onclick = null;
+      console.log(this.innerHTML);
       for (var i = 0; i < word.length; i++) {
         if (word[i] === geuss) {
           geusses[i].innerHTML = geuss;
@@ -224,6 +231,9 @@ window.onload = function () {
   play = function () {
     myStickman = document.getElementById('stickman').style.display = '';
     document.getElementById('impiccatomasti').style.display = 'none';
+    if (wordsAlreadyDone?.length == categories[0]?.length) {
+      return;
+    }
 
     var giafatta = true;
     while (giafatta) {
