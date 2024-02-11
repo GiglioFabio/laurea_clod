@@ -33,7 +33,11 @@ window.onload = function () {
     [
       { id: 1, word: 'mastarna', hint: 'Il soprannome di Claudio' },
       { id: 2, word: 'via de gaspari', hint: 'La via della casa di Clod' },
-      { id: 3, word: 'a b c', hint: 'La via della casa di Clod' },
+      {
+        id: 3,
+        word: 'tinder',
+        hint: "L'applicazione più utilizzata da Claudio",
+      },
     ],
   ]; // Array of topics
   var chosenCategory; // Selected catagory
