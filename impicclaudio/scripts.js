@@ -38,6 +38,21 @@ window.onload = function () {
         word: 'tinder',
         hint: "L'applicazione più utilizzata da Claudio",
       },
+      {
+        id: 4,
+        word: 'fidanzata',
+        hint: 'Qualità/Caratteristica che Claudio guarda in una ragazza',
+      },
+      {
+        id: 5,
+        word: 'Dipendenza di Claudio (oltre ai Pokemon)',
+        hint: 'alchol',
+      },
+      {
+        id: 6,
+        word: 'Lo è Claudio alla guida',
+        hint: 'tutto testo',
+      },
     ],
   ]; // Array of topics
   var chosenCategory; // Selected catagory
