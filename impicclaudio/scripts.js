@@ -45,13 +45,13 @@ window.onload = function () {
       },
       {
         id: 5,
-        word: 'Dipendenza di Claudio (oltre ai Pokemon)',
-        hint: 'alchol',
+        word: 'alchol',
+        hint: 'Dipendenza di Claudio (oltre ai Pokemon)',
       },
       {
         id: 6,
-        word: 'Lo è Claudio alla guida',
-        hint: 'tutto testo',
+        word: 'tutto testo',
+        hint: 'Lo è Claudio alla guida',
       },
     ],
   ]; // Array of topics
